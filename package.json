@@ -1,5 +1,5 @@
 {
-  "name": "dead-poet-records",
+  "name": "grab-sound",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/captainflo/dead-poet-records.git"
+    "url": "git+https://github.com/captainflo/grab-sound.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/captainflo/dead-poet-records/issues"
+    "url": "https://github.com/captainflo/grab-sound/issues"
   },
-  "homepage": "https://github.com/captainflo/dead-poet-records#readme",
+  "homepage": "https://github.com/captainflo/grab-sound#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "bcrypt-nodejs": "0.0.3",

@@ -72,7 +72,7 @@ class RegisterMusic extends React.Component {
 
   uploadWidget = () => {
     window.cloudinary.openUploadWidget(
-      { cloud_name: 'dxeiiwxha', upload_preset: 'cwkhqerx', tags: ['xmas'] },
+      { cloud_name: 'dwtc6zep7', upload_preset: 'lrb3zfbj', tags: ['xmas'] },
       (error, result) => {
         if (result) {
           console.log(result[0]);
@@ -86,7 +86,7 @@ class RegisterMusic extends React.Component {
   uploadWidgetAudio = () => {
     const image = process.env.PUBLIC_URL + '/images/icon-sound.png';
     window.cloudinary.openUploadWidget(
-      { cloud_name: 'dxeiiwxha', upload_preset: 'mqdda5jq', tags: ['m4a'] },
+      { cloud_name: 'dwtc6zep7', upload_preset: 'huqjbzi1', tags: ['m4a'] },
       (error, result) => {
         if (result) {
           console.log(result[0]);
