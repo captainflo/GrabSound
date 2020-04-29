@@ -1,0 +1,75 @@
+/* Music Page */
+.box-search-form {
+  padding-left: 20px;
+}
+
+.box-play {
+  margin-left: 10px;
+  width: 120px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.box-list-music {
+  margin-top: 40px;
+}
+
+.list-audio {
+  display: flex;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 10px;
+  align-items: center;
+}
+
+.cover-audio {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+}
+
+.btn-play {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.add-cart {
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.fa-cart-arrow-down {
+  color: #fff;
+}
+
+.btn-cart {
+  cursor: pointer;
+}
+
+.btn-add {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: black;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.download-sound {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+/* Modal */
+.modal {
+  width: 80% !important;
+}
+.content-plan {
+  display: block;
+  height: 200px;
+  overflow: auto;
+}

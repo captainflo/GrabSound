@@ -1,0 +1,279 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #fff;
+}
+
+/* Navbar */
+nav {
+  background-color: transparent !important;
+}
+
+.logo-img {
+  width: 60px;
+  height: auto;
+  margin-bottom: -12px;
+}
+
+.title-logo {
+  font-size: 18px;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* SideBar */
+.sidebar-background {
+  width: 320px;
+}
+
+/* Footer */
+.page-footer {
+  border-top: 1px solid #fff;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Signin & Signup */
+.box-input-signin {
+  display: block;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box-input-signin input {
+  color: #fff;
+}
+.btn-signin {
+  width: 45%;
+  background-color: #630503 !important;
+}
+.input-field .prefix.active {
+  color: #630503 !important;
+}
+
+.link-auth {
+  color: #fff;
+}
+
+/* UserShow */
+.card {
+  color: black;
+  padding: 10px;
+}
+
+.user-edit input {
+  color: black !important;
+}
+
+input[type='text']:not(.browser-default).validate + label,
+input.valid[type='text']:not(.browser-default),
+input[type='text']:not(.browser-default):focus:not([readonly]),
+input[type='tel']:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #630503 !important;
+  box-shadow: 0 1px 0 0 #630503 !important;
+}
+
+.top-left {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 16px;
+}
+
+.avatar-card {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* register Music */
+.box-register {
+  border-radius: 5px;
+  margin: 30px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid #630503 !important;
+}
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+  color: #630503 !important;
+}
+
+/* Sidbar right */
+.fa-shopping-cart {
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.close-side {
+  padding-right: 5px;
+  margin-top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#slide-ecom {
+  background-color: black;
+  color: #fff;
+}
+.sidenavEcom {
+  width: 400px !important;
+}
+.side-right {
+  right: 0 !important;
+  left: none !important;
+}
+
+.sum {
+  padding: 10px;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.sum p {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.sum button {
+  background-color: #630503;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+}
+
+.sum span {
+  margin-left: 20px;
+}
+
+.trash {
+  display: flex;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.box-render-audio {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.title-shop {
+  font-size: 20px;
+  margin-left: 45px;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  color: black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+  width: 100%;
+}
+
+/* Payment */
+.btn-payment {
+  display: block;
+  background-color: #630503;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Signin Signup */
+  .box-input-signin {
+    width: 100%;
+  }
+  .btn-signin {
+    width: 100%;
+  }
+  /* Navbar */
+  nav .brand-logo {
+    font-size: 1.1rem !important;
+    margin-left: 0px;
+    width: 250px;
+  }
+
+  nav .brand-logo i {
+    margin-top: 15px;
+  }
+  .sidenavEcom {
+    width: 300px !important;
+  }
+}
