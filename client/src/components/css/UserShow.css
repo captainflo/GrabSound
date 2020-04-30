@@ -41,7 +41,7 @@
   display: block;
   margin-top: -50px;
   margin-left: 90%;
-  background-color: #630503 !important;
+  background-color: #f01f39 !important;
 }
 
 .container-description {
@@ -57,7 +57,7 @@
 .photo-show {
   width: 100px;
   height: 100px;
-  border: 2px solid #630503;
+  border: 2px solid #f01f39;
   border-radius: 5px;
 }
 .photo-show img {
@@ -71,7 +71,7 @@
 .upload-button {
   width: 50px;
   height: 50px;
-  background-color: #630503;
+  background-color: #f01f39;
   font-size: 25px;
   color: #fff;
   border-radius: 50%;
@@ -94,7 +94,7 @@
   cursor: pointer;
   margin-left: 96px;
   margin-top: -12px;
-  color: #630503;
+  color: #f01f39;
 }
 
 @media only screen and (max-width: 600px) {

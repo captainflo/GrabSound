@@ -1,17 +1,16 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #232526; /* fallback for old browsers */
+  background: #f01f39; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #414345,
-    #232526
+    #f08d6d,
+    #f01f39
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #414345,
-    #232526
+    #f08d6d,
+    #f01f39
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   color: #fff;
 }
 
@@ -20,14 +19,12 @@ nav {
   background-color: transparent !important;
 }
 
-.logo-img {
-  width: 60px;
-  height: auto;
-  margin-bottom: -12px;
-}
-
 .title-logo {
   font-size: 18px;
+}
+
+nav .brand-logo {
+  margin-left: 15px;
 }
 
 .avatar {
@@ -45,16 +42,16 @@ nav {
 /* Footer */
 .page-footer {
   border-top: 1px solid #fff;
-  background: #232526; /* fallback for old browsers */
+  background: #f01f39; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #414345,
-    #232526
+    #f08d6d,
+    #f01f39
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #414345,
-    #232526
+    #f08d6d,
+    #f01f39
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -70,10 +67,10 @@ nav {
 }
 .btn-signin {
   width: 45%;
-  background-color: #630503 !important;
+  background-color: #f01f39 !important;
 }
 .input-field .prefix.active {
-  color: #630503 !important;
+  color: #f01f39 !important;
 }
 
 .link-auth {
@@ -94,8 +91,8 @@ input[type='text']:not(.browser-default).validate + label,
 input.valid[type='text']:not(.browser-default),
 input[type='text']:not(.browser-default):focus:not([readonly]),
 input[type='tel']:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid #630503 !important;
-  box-shadow: 0 1px 0 0 #630503 !important;
+  border-bottom: 1px solid #f01f39 !important;
+  box-shadow: 0 1px 0 0 #f01f39 !important;
 }
 
 .top-left {
@@ -122,12 +119,12 @@ input[type='tel']:not(.browser-default):focus:not([readonly]) {
 }
 
 .select-wrapper input.select-dropdown:focus {
-  border-bottom: 1px solid #630503 !important;
+  border-bottom: 1px solid #f01f39 !important;
 }
 
 .dropdown-content li > a,
 .dropdown-content li > span {
-  color: #630503 !important;
+  color: #f01f39 !important;
 }
 
 /* Sidbar right */
@@ -177,7 +174,7 @@ input[type='tel']:not(.browser-default):focus:not([readonly]) {
 }
 
 .sum button {
-  background-color: #630503;
+  background-color: #f01f39;
   border-radius: 2px;
   border: none;
   color: #fff;
@@ -244,7 +241,7 @@ input[type='tel']:not(.browser-default):focus:not([readonly]) {
 /* Payment */
 .btn-payment {
   display: block;
-  background-color: #630503;
+  background-color: #f01f39;
   border-radius: 2px;
   border: none;
   color: #fff;
@@ -265,11 +262,8 @@ input[type='tel']:not(.browser-default):focus:not([readonly]) {
   }
   /* Navbar */
   nav .brand-logo {
-    font-size: 1.1rem !important;
     margin-left: 0px;
-    width: 250px;
   }
-
   nav .brand-logo i {
     margin-top: 15px;
   }

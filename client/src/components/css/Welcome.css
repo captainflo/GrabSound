@@ -1,8 +1,15 @@
 .banner-welcome {
-  background-image: url('/images/soundWaves.gif');
+  background-image: url('/images/back.jpg');
   width: 100%;
-  height: 350px;
-  padding-top: 8%;
+  height: 550px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top top;
+  padding-top: 10%;
+}
+
+.banner-welcome h4 {
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .box-form-search-welcome {

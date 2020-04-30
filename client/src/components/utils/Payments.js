@@ -20,7 +20,7 @@ class Payments extends React.Component {
           })
         }
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
-        name="Dead Poet Records"
+        name="Grab Sound"
         description={`$${this.props.total}`}
       >
         <span className="btn-payment center modal-close ">Payment</span>

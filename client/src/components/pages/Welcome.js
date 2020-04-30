@@ -8,7 +8,7 @@ class Welcome extends React.Component {
   render() {
     return (
       <div className="banner-welcome">
-        <h4 className="center">Download the beat of DJ FUMFUM</h4>
+        <h4 className="center">Listen live and Download it</h4>
         <div className="box-form-search-welcome">
           <FormSearch />
         </div>
