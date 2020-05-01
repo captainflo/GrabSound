@@ -132,10 +132,11 @@ export const createMusic = (form, callback) => async (dispatch) => {
 };
 
 // All Music
-export const getAllMusic = () => async (dispatch) => {
+export const getAllMusic = (callback) => async (dispatch) => {
   try {
     const response = await axios.post(`/api/all/music`);
     dispatch({ type: ALL_MUSIC, payload: response.data });
+    callback(response);
   } catch (e) {
     dispatch({ type: MUSIC_ERROR, payload: 'error all music' });
   }
