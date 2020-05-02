@@ -11,7 +11,7 @@
 
 .banner-welcome h2 {
   /* text-shadow: 2px 2px 4px #000000; */
-  text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
   padding-bottom: 1rem;
 }
 /* Search Box */
@@ -32,6 +32,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-bottom: 3rem !important;
+}
+
+.text-why {
+  background: -webkit-linear-gradient(#f08d6d, #f01f39);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .sub {

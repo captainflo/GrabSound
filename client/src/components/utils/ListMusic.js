@@ -9,16 +9,15 @@ class Music extends React.Component {
     return this.props.audio.map((sound, idx) => {
       return (
         <div key={idx} className="list-audio">
-          <button
-            className="btn-play hoverable"
-            onClick={() => this.props.selectSound(idx)}
-          >
+          <div className="btn-play" onClick={() => this.props.selectSound(idx)}>
             <i className="far fa-play-circle"></i>
-          </button>
+          </div>
           <img className="cover-audio" src={sound.cover} alt="cover" />
           <div>
             {sound.name} <br></br>
-            {sound.singer}
+            <span className="grey-text text-darken-3 lighten-3">
+              {sound.singer}
+            </span>
           </div>
           <div className="add-cart">
             <ModalPlan

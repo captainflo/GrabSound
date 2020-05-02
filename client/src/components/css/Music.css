@@ -24,16 +24,16 @@
 }
 
 .cover-audio {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   margin-right: 20px;
 }
 
 .btn-play {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  font-size: 25px;
+  border: none;
   margin-right: 20px;
+  margin-left: 20px;
   cursor: pointer;
 }
 

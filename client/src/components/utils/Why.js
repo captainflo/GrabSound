@@ -25,9 +25,7 @@ class WHY extends React.Component {
                 </svg>
               </div>
 
-              <h6 className="header grey-text text-darken-3 lighten-3">
-                Download music.
-              </h6>
+              <h6 className="header text-why">Download music.</h6>
               <p className="sub grey-text">Listen anywhere.</p>
             </div>
           </div>
@@ -47,9 +45,7 @@ class WHY extends React.Component {
                 </svg>
               </div>
 
-              <h6 className="header grey-text text-darken-3 lighten-3">
-                No ad interruptions.
-              </h6>
+              <h6 className="header text-why">No ad interruptions.</h6>
               <p className="sub grey-text">Enjoy nonstop music.</p>
             </div>
           </div>
@@ -79,9 +75,7 @@ class WHY extends React.Component {
                   </g>
                 </svg>
               </div>
-              <h6 className="header grey-text text-darken-3 lighten-3">
-                Play any song.
-              </h6>
+              <h6 className="header text-why">Play any song.</h6>
               <p className="sub grey-text">Even on mobile.</p>
             </div>
           </div>
@@ -123,9 +117,7 @@ class WHY extends React.Component {
                   </g>
                 </svg>
               </div>
-              <h6 className="header grey-text text-darken-3 lighten-3">
-                Unlimited skips.
-              </h6>
+              <h6 className="header text-why">Unlimited skips.</h6>
               <p className="sub grey-text">Just hit next.</p>
             </div>
           </div>
