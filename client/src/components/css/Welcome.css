@@ -1,4 +1,4 @@
-/* Banner 01  */
+/* Banner search  */
 .banner-welcome {
   background-image: url('/images/back.jpg');
   width: 100%;
@@ -22,7 +22,7 @@
   margin-right: auto;
 }
 
-/* banner 02 */
+/* banner concept */
 .section {
   padding-top: 3rem !important;
   padding-bottom: 4rem !important;
@@ -58,10 +58,19 @@
     #f01f39
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/* Banner 03 */
+/* Banner album */
 .carousel-cover {
   border-radius: 5px;
 }
 
+/* Banner Phone */
+.iphone {
+  width: 100%;
+  height: auto;
+}
+
+.box-text-device {
+  margin-top: 20%;
+}
 @media only screen and (max-width: 600px) {
 }
