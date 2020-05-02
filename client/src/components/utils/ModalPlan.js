@@ -25,85 +25,35 @@ class ModalPlan extends React.Component {
         <div id={this.props.name} className="modal">
           <div className="modal-content">
             <div>
-              <h4 style={{ color: 'black' }} className="center">
+              <h5 className="center title-plan">
+                Choose how you want to listen.
+              </h5>
+              <p className="sound-plan center">
                 License: {this.props.name} - {this.props.singer}
-              </h4>
+              </p>
               <div className="row">
-                <div className="col s12 m3">
-                  <div className="card-panel black">
-                    <h6 className="center">Basic $1000</h6>
-                    <hr></hr>
-                    <div className="white-text content-plan">
-                      <p>MP3 + WAV</p>
-                      <p>5,000 sales</p>
-                      <p>50,000 streams</p>
-                      <p>Non-exclusive (lease)</p>
+                <div className="col s12 m12">
+                  <div className="box-plan">
+                    <div className="header-plan">
+                      <h6 className="center">Sound Gab Individual $0.99</h6>
+                      <i className="fas fa-headphones-alt logo"></i>
                     </div>
-                    <hr></hr>
-                    <div
-                      onClick={() => this.props.addItem(1000, audio, 'Basic')}
-                      className="btn-add center modal-close"
-                    >
-                      Add Cart
+                    <div className="content-plan">
+                      <p className="grey-text">
+                        <i className="fas fa-check"></i> Download Your MP3 sound
+                      </p>
+                      <p className="grey-text">
+                        <i className="fas fa-check"></i> Add o your library
+                      </p>
+                      <p className="grey-text">
+                        <i className="fas fa-check"></i> High quality audio
+                      </p>
                     </div>
-                  </div>
-                </div>
-                <div className="col s12 m3">
-                  <div className="card-panel black">
-                    <h6 className="center">Premium $2500</h6>
-                    <hr></hr>
-                    <div className="white-text content-plan">
-                      <p>MP3 + WAV</p>
-                      <p>10,000 sales</p>
-                      <p>100,000 streams</p>
-                      <p>Non-exclusive (lease)</p>
-                    </div>
-                    <hr></hr>
-                    <div
-                      onClick={() => this.props.addItem(2500, audio, 'Premium')}
-                      className="btn-add center modal-close"
-                    >
-                      Add Cart
-                    </div>
-                  </div>
-                </div>
-                <div className="col s12 m3">
-                  <div className="card-panel black">
-                    <h6 className="center">Trackout $5000</h6>
-                    <hr></hr>
-                    <div className="white-text content-plan">
-                      <p>MP3 + WAV + Trackout</p>
-                      <p>Unlimited sales</p>
-                      <p>Unlimited sales</p>
-                      <p>Non-exclusive (lease)</p>
-                    </div>
-                    <hr></hr>
                     <div
                       onClick={() =>
-                        this.props.addItem(5000, audio, 'Trackout')
+                        this.props.addItem(0.99, audio, 'Indivual')
                       }
                       className="btn-add center modal-close"
-                    >
-                      Add Cart
-                    </div>
-                  </div>
-                </div>
-                <div className="col s12 m3">
-                  <div className="card-panel black">
-                    <h6 className="center">Exclusive $10000</h6>
-                    <hr></hr>
-                    <div className="white-text content-plan">
-                      <p>MP3 + WAV + Trackout</p>
-                      <p>Unlimited sales</p>
-                      <p>Unlimited sales</p>
-                      <p>Full ownership</p>
-                    </div>
-                    <hr></hr>
-                    <div
-                      onClick={() =>
-                        this.props.addItem(10000, audio, 'Exclusive')
-                      }
-                      className="btn-add center modal-close "
                     >
                       Add Cart
                     </div>

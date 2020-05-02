@@ -23,7 +23,7 @@ class Music extends React.Component {
     return (
       <div>
         <div className="box-search-form">
-          <h4>List Music</h4>
+          <h4>{this.props.match.params.id} List Music</h4>
           <FronSearch />
         </div>
         {this.props.sounds.length !== 0 ? (

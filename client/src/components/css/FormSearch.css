@@ -28,9 +28,7 @@
 .btn-search {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
+  border: none;
   background-color: #fff;
   width: 50px;
   padding-top: 5px;

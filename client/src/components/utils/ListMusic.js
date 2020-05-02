@@ -21,6 +21,7 @@ class Music extends React.Component {
           </div>
           <div className="add-cart">
             <ModalPlan
+              id={sound._id}
               name={sound.name}
               singer={sound.singer}
               cover={sound.cover}

@@ -10,6 +10,7 @@ import Preload from '../utils/preload';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import WHY from '../utils/Why';
 import BannerPhone from '../utils/BannerPhone';
+import ModalPlan from '../utils/ModalPlan';
 
 class Welcome extends React.Component {
   state = {

@@ -69,6 +69,10 @@
   border-radius: 5px;
 }
 
+.carousel {
+  height: 355px !important;
+}
+
 /* Banner Phone */
 .iphone {
   width: 100%;
