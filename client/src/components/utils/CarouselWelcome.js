@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import M from 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
 
-class Carousel extends Component {
+class CarouselWelcome extends Component {
   componentDidMount() {
     const options = {
       duration: 300,
+      numVisible: 14,
     };
     M.Carousel.init(this.Carousel, options);
     console.log(this.props.music);
@@ -18,15 +19,16 @@ class Carousel extends Component {
         key={i.cover}
         className="carousel-item"
       >
-        <img src={i.cover} alt="cover" />
+        <img className="carousel-cover" src={i.cover} alt="cover" />
       </div>
     ));
   };
 
   render() {
     return (
-      <div>
-        <h2>Last Sound</h2>
+      <div className="section">
+        <h3 className="center">Last Sound</h3>
+        <h6 className="center">Listen the last Release</h6>
         <div
           ref={(Carousel) => {
             this.Carousel = Carousel;
@@ -40,4 +42,4 @@ class Carousel extends Component {
   }
 }
 
-export default Carousel;
+export default CarouselWelcome;

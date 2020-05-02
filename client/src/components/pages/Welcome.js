@@ -1,10 +1,14 @@
 import React from 'react';
 import '../css/Welcome.css';
 import { connect } from 'react-redux';
+import '../css/Welcome.css';
 import * as actions from '../actions';
 import FormSearch from '../utils/FormSearch';
 import CarouselWelcome from '../utils/CarouselWelcome';
 import SoundBar from '../utils/SoundBar';
+import Preload from '../utils/preload';
+import M from 'materialize-css/dist/js/materialize.min.js';
+import WHY from '../utils/Why';
 
 class Welcome extends React.Component {
   state = {
@@ -13,6 +17,8 @@ class Welcome extends React.Component {
 
   componentDidMount() {
     this.props.getAllMusic();
+    const elems = document.querySelectorAll('.parallax');
+    M.Parallax.init(elems, { height: '200px' });
   }
 
   play = (music) => {
@@ -20,30 +26,21 @@ class Welcome extends React.Component {
   };
 
   render() {
-    console.log(this.state.audio);
     return (
       <div>
         <div className="banner-welcome">
-          <h4 className="center">Listen live and Download it</h4>
+          <h2 className="center">Music for everyone.</h2>
           <div className="box-form-search-welcome">
             <FormSearch />
           </div>
         </div>
+        {/* WHY */}
+        <WHY />
         {this.props.music ? (
           <CarouselWelcome music={this.props.music} play={this.play} />
         ) : (
-          <div className="preloader-wrapper big active">
-            <div className="spinner-layer spinner-blue">
-              <div className="circle-clipper left">
-                <div className="circle"></div>
-              </div>
-              <div className="gap-patch">
-                <div className="circle"></div>
-              </div>
-              <div className="circle-clipper right">
-                <div className="circle"></div>
-              </div>
-            </div>
+          <div className="parallax-container">
+            <Preload />
           </div>
         )}
         {this.state.audio.length !== 0 ? (

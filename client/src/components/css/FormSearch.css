@@ -5,7 +5,11 @@
   height: 3rem;
   width: 270px;
   background-color: #fff;
-  color: black;
+  color: #f08d6d;
+}
+
+.box-search .select-wrapper input.select-dropdown {
+  color: #f08d6d;
 }
 
 .box-search {
@@ -14,7 +18,11 @@
   height: 3rem;
   width: 270px;
   background-color: #fff;
-  color: black;
+  color: #f08d6d;
+}
+
+.select-wrapper .caret {
+  fill: #f08d6d !important;
 }
 
 .btn-search {
@@ -27,6 +35,7 @@
   width: 50px;
   padding-top: 5px;
   padding-left: 7px;
+  color: #f08d6d;
 }
 
 button:focus {

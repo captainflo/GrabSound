@@ -124,7 +124,7 @@ input[type='tel']:not(.browser-default):focus:not([readonly]) {
 
 .dropdown-content li > a,
 .dropdown-content li > span {
-  color: #f01f39 !important;
+  color: #f08d6d !important;
 }
 
 /* Sidbar right */
