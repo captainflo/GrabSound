@@ -32,7 +32,7 @@ class ModalPlan extends React.Component {
                 License: {this.props.name} - {this.props.singer}
               </p>
               <div className="row">
-                <div className="col s12 m12">
+                <div className="col s12 m6">
                   <div className="box-plan">
                     <div className="header-plan">
                       <h6 className="center">Sound Gab Individual $0.99</h6>
@@ -53,6 +53,31 @@ class ModalPlan extends React.Component {
                       onClick={() =>
                         this.props.addItem(0.99, audio, 'Indivual')
                       }
+                      className="btn-add center modal-close"
+                    >
+                      Add Cart
+                    </div>
+                  </div>
+                </div>
+                <div className="col s12 m6">
+                  <div className="box-plan">
+                    <div className="header-plan">
+                      <h6 className="center">Sound Gab Individual $5</h6>
+                      <i className="fas fa-headphones-alt logo"></i>
+                    </div>
+                    <div className="content-plan">
+                      <p className="grey-text">
+                        <i className="fas fa-check"></i> Download Your MP3 sound
+                      </p>
+                      <p className="grey-text">
+                        <i className="fas fa-check"></i> Add o your library
+                      </p>
+                      <p className="grey-text">
+                        <i className="fas fa-check"></i> High quality audio
+                      </p>
+                    </div>
+                    <div
+                      onClick={() => this.props.addItem(5.0, audio, 'Premium')}
                       className="btn-add center modal-close"
                     >
                       Add Cart
