@@ -9,7 +9,7 @@ import SoundBar from '../utils/SoundBar';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import WHY from '../utils/Why';
 import BannerPhone from '../utils/BannerPhone';
-import Preload from '../utils/Preload';
+// import Preload from '../utils/Preload';
 
 class Welcome extends React.Component {
   state = {
@@ -38,9 +38,7 @@ class Welcome extends React.Component {
         {this.props.music ? (
           <CarouselWelcome music={this.props.music} play={this.play} />
         ) : (
-          <div className="parallax-container">
-            <Preload />
-          </div>
+          <div className="parallax-container">{/* <Preload /> */}</div>
         )}
         {this.state.audio.length !== 0 ? (
           <SoundBar audio={this.state.audio} />
