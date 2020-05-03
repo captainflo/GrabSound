@@ -6,7 +6,7 @@ import * as actions from '../actions';
 import FormSearch from '../utils/FormSearch';
 import CarouselWelcome from '../utils/CarouselWelcome';
 import SoundBar from '../utils/SoundBar';
-import Preload from '../utils/preload';
+import Preload from '../utils/Preload';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import WHY from '../utils/Why';
 import BannerPhone from '../utils/BannerPhone';
