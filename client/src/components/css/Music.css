@@ -56,6 +56,12 @@
   margin-right: 10px;
 }
 
+/* Playlist */
+.icon {
+  font-size: 45px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
 /* Modal */
 .modal {
   width: 80% !important;
@@ -126,6 +132,14 @@
 @media only screen and (max-width: 600px) {
   .add-cart {
     margin-right: 2px;
+  }
+
+  .hearder-playlist h2 {
+    font-size: 20px;
+  }
+
+  .icon {
+    font-size: 20px;
   }
 
   .btn-play {

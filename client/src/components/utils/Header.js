@@ -17,11 +17,11 @@ class Header extends React.Component {
           </li>
           <li>
             <Link to={`/playlist/${this.props.authenticated._id}`}>
-              My Playlist
+              Playlist
             </Link>
           </li>
           <li>
-            <Link to="/music/list/All">Music</Link>
+            <Link to="/music/list/All">Music Store</Link>
           </li>
           <li>
             <p data-target="slide-ecom" className="sidenav-trigger" to={''}>

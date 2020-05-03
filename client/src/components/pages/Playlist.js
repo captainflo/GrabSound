@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import SoundBar from '../utils/SoundBar';
+import Load from '../utils/Load';
 
 class Playlist extends React.Component {
   state = {
@@ -12,14 +13,19 @@ class Playlist extends React.Component {
     this.props.getSoundPlaylist(this.props.match.params.id);
   }
 
+  Download = (audioSrc) => {
+    console.log(audioSrc);
+    let str = audioSrc;
+    const music = str.replace('upload/', 'upload/fl_attachment/');
+    window.open(music);
+  };
+
   selectSound = (idx) => {
     this.setState({ playIndex: idx });
   };
 
   renderMusicDownload = () => {
     return this.props.music.map((sound, idx) => {
-      // const str = sound.musicSrc;
-      // const music = str.replace('upload/', 'upload/fl_attachment/');
       return (
         <div key={idx} className="list-audio">
           <div className="btn-play" onClick={() => this.selectSound(idx)}>
@@ -30,9 +36,12 @@ class Playlist extends React.Component {
             {sound.name} <br></br>
             {sound.singer}
           </div>
-          <a className="download-sound" href={sound.musicSrc} download>
+          <div
+            onClick={() => this.Download(sound.musicSrc)}
+            className="download-sound"
+          >
             <i className="fas fa-download"></i>
-          </a>
+          </div>
         </div>
       );
     });
@@ -43,6 +52,14 @@ class Playlist extends React.Component {
       <div>
         {this.props.music ? (
           <div>
+            <div className="hearder-playlist">
+              <h2 className="center">My Playlist Sound</h2>
+              <div className="center icon">
+                <i className="fas fa-compact-disc"></i>{' '}
+                <i className="fas fa-headphones-alt"></i>
+                <i className="fas fa-music"></i>
+              </div>
+            </div>
             {this.renderMusicDownload()}{' '}
             <SoundBar
               audio={this.props.music}
@@ -50,7 +67,14 @@ class Playlist extends React.Component {
             />
           </div>
         ) : (
-          'no'
+          <div style={{ padding: '10px' }} className="center">
+            <h2>You don't have Playlist...</h2>
+            <div style={{ fontSize: '45px' }}>
+              <i className="fas fa-compact-disc"></i>{' '}
+              <i className="fas fa-headphones-alt"></i>
+              <i className="fas fa-music"></i>
+            </div>
+          </div>
         )}
       </div>
     );
@@ -58,7 +82,6 @@ class Playlist extends React.Component {
 }
 
 function mapStateToPros(state) {
-  console.log(state);
   return {
     authenticated: state.auth.authenticated,
     music: state.playlist.listAudio.sounds,
