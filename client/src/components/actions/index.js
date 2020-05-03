@@ -8,6 +8,9 @@ import {
   MUSIC_BY_GENRE,
   ALL_MUSIC,
   MUSIC_ERROR,
+  CREATE_PLAYLIST,
+  PLAYLIST,
+  PLAYLIST_ERROR,
 } from './types';
 import * as JWT from 'jwt-decode';
 
@@ -152,6 +155,30 @@ export const getMusicByGenre = (genre) => async (dispatch) => {
   }
 };
 
+////////////////////////////////////////// Playlist //////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// Create Playlist
+export const createPlaylist = (form, callback) => async (dispatch) => {
+  try {
+    const response = await axios.post(`/api/playlist/create`, form);
+    dispatch({ type: PLAYLIST, payload: response.data });
+    callback(); /* history callback */
+  } catch (e) {
+    dispatch({ type: PLAYLIST_ERROR, payload: 'error create Playlist' });
+  }
+};
+
+// get Playlist by user
+export const getSoundPlaylist = (id) => async (dispatch) => {
+  try {
+    const response = await axios.post(`/api/playlist/user/${id}`);
+    dispatch({ type: PLAYLIST, payload: response.data });
+  } catch (e) {
+    dispatch({ type: PLAYLIST_ERROR, payload: 'error get Playlist' });
+  }
+};
+
 ////////////////////////////////////////// Cloudinary ////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -167,11 +194,12 @@ export const deleteAudio = (audio) => async () => {
 
 ////////////////////////////////////////// Stripe /////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
-export const handleToken = (token, form, callback) => async () => {
+export const handleToken = (token, form, callback) => async (dispatch) => {
   const body = {
     form: form,
     token: token,
   };
-  await axios.post(`/api/stripe`, body);
+  const res = await axios.post('/api/stripe', body);
+  dispatch({ type: PLAYLIST, payload: res.data });
   callback();
 };

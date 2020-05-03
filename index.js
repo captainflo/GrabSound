@@ -30,6 +30,7 @@ require('./routes/authRoutes')(app);
 require('./routes/cloudinaryRoutes')(app);
 require('./routes/musicRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/playlistRoutes')(app);
 // Connect Mongo Atlas
 mongoose.connect(keys.mongoURI, {
   useNewUrlParser: true,

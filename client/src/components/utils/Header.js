@@ -16,6 +16,11 @@ class Header extends React.Component {
             <Link to="/register/music">Add Music</Link>
           </li>
           <li>
+            <Link to={`/playlist/${this.props.authenticated._id}`}>
+              My Playlist
+            </Link>
+          </li>
+          <li>
             <Link to="/music/list/All">Music</Link>
           </li>
           <li>

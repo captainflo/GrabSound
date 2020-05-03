@@ -9,7 +9,6 @@ class CarouselWelcome extends Component {
       numVisible: 14,
     };
     M.Carousel.init(this.Carousel, options);
-    console.log(this.props.music);
   }
 
   renderThis = () => {

@@ -8,6 +8,7 @@ class ModalPlan extends React.Component {
   }
   render() {
     const audio = {
+      id: this.props.id,
       name: this.props.name,
       singer: this.props.singer,
       cover: this.props.cover,

@@ -14,7 +14,6 @@ const userSchema = new Schema({
   firstName: String,
   lastName: String,
   phone: String,
-  music: [String],
 });
 
 // On save Hook, encrypt password
