@@ -17,7 +17,7 @@ module.exports = (app) => {
 
     const playlist = new Playlist({
       user: user,
-      sounds: req.body.musicId,
+      sounds: sounds,
     });
 
     Playlist.findOne({ user: user }, function (error, existingPlaylist) {
