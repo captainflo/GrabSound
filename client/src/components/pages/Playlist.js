@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import SoundBar from '../utils/SoundBar';
+import Preload from '../utils/preload';
 
 class Playlist extends React.Component {
   state = {
@@ -50,7 +51,7 @@ class Playlist extends React.Component {
             />
           </div>
         ) : (
-          'nothing'
+          <Preload />
         )}
       </div>
     );
