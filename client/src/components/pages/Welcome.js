@@ -9,7 +9,6 @@ import SoundBar from '../utils/SoundBar';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import WHY from '../utils/Why';
 import BannerPhone from '../utils/BannerPhone';
-// import Preload from '../utils/Preload';
 
 class Welcome extends React.Component {
   state = {
