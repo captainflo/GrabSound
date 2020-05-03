@@ -33,6 +33,8 @@ class ModalAgreement extends React.Component {
               </p>
               {this.state.agree ? (
                 <Payments
+                  userId={this.props.userId}
+                  music={this.props.music}
                   total={this.props.total}
                   paymentSucces={this.props.paymentSucces}
                 />

@@ -9,6 +9,7 @@ class BannerPhone extends Component {
             <img
               className="iphone"
               src={process.env.PUBLIC_URL + '/images/1.png'}
+              alt="device"
             />
           </div>
           <div className="col m6">

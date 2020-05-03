@@ -17,11 +17,10 @@ import UserEdit from './user/UserEdit';
 import Music from './pages/Music';
 import RegisterMusic from './pages/RegisterMusic';
 import ModalAgreement from './utils/ModalAgreement';
-import SucessPayment from './pages/SucessPayment';
+import Playlist from './pages/Playlist';
 
 class App extends React.Component {
   state = {
-    payment: true,
     quantity: 0,
     total: 0,
     music: [],
@@ -77,19 +76,6 @@ class App extends React.Component {
     instance.close();
   };
 
-  paymentSucces = () => {
-    this.setState({ payment: true });
-    const files = [];
-    for (let i = 0; i < this.state.music.length; i++) {
-      let str = this.state.music[i].audio.musicSrc;
-      const music = str.replace('upload/', 'upload/fl_attachment/');
-      files.push(music);
-    }
-    for (var ii = 0; ii < files.length; ii++) {
-      window.open(files[ii]);
-    }
-  };
-
   render() {
     return (
       <div>
@@ -103,8 +89,9 @@ class App extends React.Component {
             closeSidebarEcom={this.closeSidebarEcom}
           />
           <ModalAgreement
+            userId={this.props.authenticated._id}
+            music={this.state.music}
             total={this.state.total}
-            paymentSucces={this.paymentSucces}
           />
           <Route exact path="/" component={Welcome} />
           <Route exact path="/signout" component={Signout} />
@@ -120,17 +107,7 @@ class App extends React.Component {
               <Route exact path="/user/:id" component={UserShow} />
               <Route exact path="/user/edit/:id" component={UserEdit} />
               <Route exact path="/register/music" component={RegisterMusic} />
-              <Route
-                exact
-                path="/succes/payment"
-                render={(props) => (
-                  <SucessPayment
-                    {...props}
-                    music={this.state.music}
-                    payment={this.state.payment}
-                  />
-                )}
-              />
+              <Route exact path="/playlist/:id" component={Playlist} />
             </div>
           ) : (
             ''
