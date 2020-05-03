@@ -88,11 +88,6 @@ class App extends React.Component {
             closeSidebar={this.closeSidebar}
             closeSidebarEcom={this.closeSidebarEcom}
           />
-          <ModalAgreement
-            userId={this.props.authenticated._id}
-            music={this.state.music}
-            total={this.state.total}
-          />
           <Route exact path="/" component={Welcome} />
           <Route exact path="/signout" component={Signout} />
           <Route exact path="/signin" component={Signin} />
@@ -108,6 +103,11 @@ class App extends React.Component {
               <Route exact path="/user/edit/:id" component={UserEdit} />
               <Route exact path="/register/music" component={RegisterMusic} />
               <Route exact path="/playlist/:id" component={Playlist} />
+              <ModalAgreement
+                userId={this.props.authenticated._id}
+                music={this.state.music}
+                total={this.state.total}
+              />
             </div>
           ) : (
             ''
