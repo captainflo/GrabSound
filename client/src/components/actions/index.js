@@ -158,14 +158,14 @@ export const getMusicByGenre = (genre) => async (dispatch) => {
 ////////////////////////////////////////// Playlist //////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-// Create Playlist
-export const createPlaylist = (form, callback) => async (dispatch) => {
+// add Playlist
+export const addPlaylist = (form, callback) => async (dispatch) => {
   try {
-    const response = await axios.post(`/api/playlist/create`, form);
+    const response = await axios.post(`/api/playlist/add`, form);
     dispatch({ type: PLAYLIST, payload: response.data });
     callback(); /* history callback */
   } catch (e) {
-    dispatch({ type: PLAYLIST_ERROR, payload: 'error create Playlist' });
+    dispatch({ type: PLAYLIST_ERROR, payload: 'error add Playlist' });
   }
 };
 

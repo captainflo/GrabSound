@@ -70,7 +70,7 @@ class Header extends React.Component {
           <div className="nav-wrapper">
             <Link className="brand-logo" to="/">
               <span className="title-logo">
-                <i className="fas fa-headphones-alt"></i>Grab Sound
+                <i className="fas fa-headphones-alt"></i>Sound Grab
               </span>
             </Link>
             <a href="#/" data-target="slide-out" className="sidenav-trigger">

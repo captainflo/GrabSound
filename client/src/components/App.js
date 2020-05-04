@@ -54,6 +54,17 @@ class App extends React.Component {
     instance.open();
   };
 
+  addMyPlaylist = (sound, userId) => {
+    const form = {
+      userId: userId,
+      musicId: sound._id,
+    };
+
+    this.props.addPlaylist(form, () =>
+      this.props.history.push(`/playlist/${form.userId}`)
+    );
+  };
+
   deleteItem = (idx, price) => {
     this.state.music.splice(idx, idx + 1);
     this.forceUpdate();
@@ -95,7 +106,13 @@ class App extends React.Component {
           <Route
             exact
             path="/music/list/:id"
-            render={(props) => <Music {...props} addItem={this.addItem} />}
+            render={(props) => (
+              <Music
+                {...props}
+                addItem={this.addItem}
+                addMyPlaylist={this.addMyPlaylist}
+              />
+            )}
           />
           {this.props.authenticated ? (
             <div>

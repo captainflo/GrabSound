@@ -44,8 +44,11 @@ class UserShow extends React.Component {
                   </div>
                 </h4>
                 <p>
-                  <i className="fas fa-signature"></i>{' '}
-                  {this.props.authenticated.description}
+                  {this.props.authenticated.unlimited && (
+                    <p>
+                      <i className="far fa-id-card"></i> Unlimited plan
+                    </p>
+                  )}
                 </p>
                 <p>
                   <i className="fas fa-phone-square"></i>{' '}

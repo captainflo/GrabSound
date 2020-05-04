@@ -8,14 +8,19 @@ import { compose } from 'redux';
 class Payments extends React.Component {
   render() {
     const musicArray = [];
+    const planArray = [];
     for (let i = 0; i < this.props.music.length; i++) {
+      console.log(this.props.music);
       const musicId = this.props.music[i].audio.id;
+      const plan = this.props.music[i].plan;
       musicArray.push(musicId);
+      planArray.push(plan);
     }
     const form = {
       total: this.props.total * 100,
       musicId: musicArray,
       userId: this.props.userId,
+      plan: planArray,
     };
     console.log(form);
 

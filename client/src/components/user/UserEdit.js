@@ -51,7 +51,6 @@ class UserEdit extends React.Component {
       const form = {
         firstName: formProps.firstName,
         lastName: formProps.lastName,
-        description: formProps.description,
         phone: formProps.phone,
         avatar: this.state.image || this.props.auth.avatar,
       };
@@ -96,18 +95,6 @@ class UserEdit extends React.Component {
               <div className="col m6 s12">
                 <div className="input-field">
                   <Field
-                    name="description"
-                    type="text"
-                    component={renderField}
-                    label="Description"
-                    icon="description"
-                  />
-                  <span className="asterick right">10 characters Min</span>
-                </div>
-              </div>
-              <div className="col m6 s12">
-                <div className="input-field">
-                  <Field
                     name="phone"
                     type="tel"
                     component={renderField}
@@ -117,32 +104,37 @@ class UserEdit extends React.Component {
                   />
                 </div>
               </div>
+              <div className="col m6 s12">
+                <div className="upload">
+                  <div>Add Photo</div>
+                  <p
+                    onClick={this.uploadWidget.bind(this)}
+                    className="upload-button"
+                  >
+                    <i className="fas fa-camera"></i>
+                  </p>
+
+                  {this.state.image ? (
+                    <div>
+                      <div
+                        className="delete-picture"
+                        onClick={this.deletePhoto}
+                      >
+                        <i className="far fa-times-circle"></i>
+                      </div>
+                      <img
+                        className="photo-show"
+                        src={this.state.image}
+                        alt="avatar"
+                      />
+                    </div>
+                  ) : (
+                    ''
+                  )}
+                </div>
+              </div>
             </div>
             {error && <strong>{error}</strong>}
-            <div className="upload">
-              <div>Add Photo</div>
-              <p
-                onClick={this.uploadWidget.bind(this)}
-                className="upload-button"
-              >
-                <i className="fas fa-camera"></i>
-              </p>
-
-              {this.state.image ? (
-                <div>
-                  <div className="delete-picture" onClick={this.deletePhoto}>
-                    <i className="far fa-times-circle"></i>
-                  </div>
-                  <img
-                    className="photo-show"
-                    src={this.state.image}
-                    alt="avatar"
-                  />
-                </div>
-              ) : (
-                ''
-              )}
-            </div>
 
             <div className="center">
               <button

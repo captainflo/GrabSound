@@ -14,6 +14,11 @@ class ModalPlan extends React.Component {
       cover: this.props.cover,
       musicSrc: this.props.musicSrc,
     };
+    const plan = {
+      name: 'Sound Grab',
+      singer: 'Plan',
+      cover: process.env.PUBLIC_URL + '/images/icon-plan.png',
+    };
     return (
       <div>
         <a
@@ -29,8 +34,8 @@ class ModalPlan extends React.Component {
               <h5 className="center title-plan">
                 Choose how you want to listen.
               </h5>
-              <p className="sound-plan center">
-                License: {this.props.name} - {this.props.singer}
+              <p className=" grey-text center">
+                {this.props.name} - {this.props.singer}
               </p>
               <div className="row">
                 <div className="col s12 m6">
@@ -44,7 +49,7 @@ class ModalPlan extends React.Component {
                         <i className="fas fa-check"></i> Download Your MP3 sound
                       </p>
                       <p className="grey-text">
-                        <i className="fas fa-check"></i> Add o your library
+                        <i className="fas fa-check"></i> Add to your library
                       </p>
                       <p className="grey-text">
                         <i className="fas fa-check"></i> High quality audio
@@ -63,22 +68,25 @@ class ModalPlan extends React.Component {
                 <div className="col s12 m6">
                   <div className="box-plan">
                     <div className="header-plan">
-                      <h6 className="center">Sound Gab Individual $5</h6>
+                      <h6 className="center">Sound Gab Unlimited $5/Month</h6>
                       <i className="fas fa-headphones-alt logo"></i>
                     </div>
                     <div className="content-plan">
                       <p className="grey-text">
-                        <i className="fas fa-check"></i> Download Your MP3 sound
+                        <i className="fas fa-check"></i> Download Unlimited MP3
+                        sound
                       </p>
                       <p className="grey-text">
-                        <i className="fas fa-check"></i> Add o your library
+                        <i className="fas fa-check"></i> Add to your library
                       </p>
                       <p className="grey-text">
                         <i className="fas fa-check"></i> High quality audio
                       </p>
                     </div>
                     <div
-                      onClick={() => this.props.addItem(5.0, audio, 'Premium')}
+                      onClick={() =>
+                        this.props.addItem(5.0, audio, 'Unlimited')
+                      }
                       className="btn-add center modal-close"
                     >
                       Add Cart

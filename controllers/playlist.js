@@ -30,6 +30,37 @@ exports.createPlaylist = function (req, res, next) {
   });
 };
 
+exports.addPlaylist = function (req, res, next) {
+  const user = req.body.userId;
+  const musicId = req.body.musicId;
+
+  const playlist = new Playlist({
+    user: user,
+    sounds: musicId,
+  });
+
+  Playlist.findOne({ user: user }, function (error, existingPlaylist) {
+    // if a playlist with userId does exist.
+    if (existingPlaylist) {
+      // if a playlist with userId does exist.
+      Playlist.findOneAndUpdate(
+        { user: user },
+        { $push: { sounds: musicId } },
+        { new: true }
+      ).then((data) => {
+        res.send(data);
+      });
+    } else {
+      playlist.save(function (error, playlist) {
+        if (error) {
+          return next(error);
+        }
+        res.send(playlist);
+      });
+    }
+  });
+};
+
 exports.getSoundPlaylist = function (req, res, next) {
   Playlist.findOne({ user: req.params.id })
     .populate('sounds')
