@@ -49,7 +49,7 @@ class ModalAgreement extends React.Component {
           </div>
         ) : (
           <div style={{ color: 'black' }} className="modal-content center">
-            <h4 className="title">You must Log in before Checkout</h4>
+            <h4 className="title-why">You must Log in before Checkout</h4>
             <Link to={'/signin'} className="btn-no-signin">
               Sign In
             </Link>
