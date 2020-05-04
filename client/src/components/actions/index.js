@@ -8,7 +8,6 @@ import {
   MUSIC_BY_GENRE,
   ALL_MUSIC,
   MUSIC_ERROR,
-  CREATE_PLAYLIST,
   PLAYLIST,
   PLAYLIST_ERROR,
 } from './types';

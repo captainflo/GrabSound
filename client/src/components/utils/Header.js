@@ -12,9 +12,13 @@ class Header extends React.Component {
           <li>
             <Link to="/signout">Signout</Link>
           </li>
-          <li>
-            <Link to="/register/music">Add Music</Link>
-          </li>
+          {this.props.authenticated.email === 'lahitte.florian@gmail.com' ? (
+            <li>
+              <Link to="/register/music">Add Music</Link>
+            </li>
+          ) : (
+            ''
+          )}
           <li>
             <Link to={`/playlist/${this.props.authenticated._id}`}>
               Playlist
@@ -47,7 +51,7 @@ class Header extends React.Component {
       return (
         <div>
           <li>
-            <Link to="/music/list/All">Music</Link>
+            <Link to="/music/list/All">Music Store</Link>
           </li>
           <li>
             <p data-target="slide-ecom" className="sidenav-trigger" to={''}>

@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import SoundBar from '../utils/SoundBar';
-import Load from '../utils/Load';
 
 class Playlist extends React.Component {
   state = {
@@ -69,6 +68,7 @@ class Playlist extends React.Component {
         ) : (
           <div style={{ padding: '10px' }} className="center">
             <h2>You don't have Playlist...</h2>
+            <p>Go to Music Store and grab your sound </p>
             <div style={{ fontSize: '45px' }}>
               <i className="fas fa-compact-disc"></i>{' '}
               <i className="fas fa-headphones-alt"></i>

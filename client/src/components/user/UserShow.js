@@ -44,13 +44,6 @@ class UserShow extends React.Component {
                   </div>
                 </h4>
                 <p>
-                  {this.props.authenticated.unlimited && (
-                    <p>
-                      <i className="far fa-id-card"></i> Unlimited plan
-                    </p>
-                  )}
-                </p>
-                <p>
                   <i className="fas fa-phone-square"></i>{' '}
                   {this.props.authenticated.phone}
                 </p>
@@ -58,6 +51,12 @@ class UserShow extends React.Component {
                   <i className="far fa-envelope"></i>{' '}
                   {this.props.authenticated.email}
                 </p>
+
+                {this.props.authenticated.unlimited && (
+                  <p>
+                    <i className="far fa-id-card"></i> Unlimited plan
+                  </p>
+                )}
               </div>
             </div>
           </div>

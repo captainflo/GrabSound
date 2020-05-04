@@ -14,11 +14,6 @@ class ModalPlan extends React.Component {
       cover: this.props.cover,
       musicSrc: this.props.musicSrc,
     };
-    const plan = {
-      name: 'Sound Grab',
-      singer: 'Plan',
-      cover: process.env.PUBLIC_URL + '/images/icon-plan.png',
-    };
     return (
       <div>
         <a
