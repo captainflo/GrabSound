@@ -254,6 +254,31 @@ input[type='tel']:not(.browser-default):focus:not([readonly]) {
   cursor: pointer;
 }
 
+/* No signin  */
+.btn-no-signin {
+  display: block;
+  background: #f01f39; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f08d6d,
+    #f01f39
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f08d6d,
+    #f01f39
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
 @media only screen and (max-width: 600px) {
   /* Signin Signup */
   .box-input-signin {

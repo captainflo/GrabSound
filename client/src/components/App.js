@@ -68,7 +68,6 @@ class App extends React.Component {
   deleteItem = (idx, price) => {
     this.state.music.splice(idx, idx + 1);
     this.forceUpdate();
-    console.log(this.state.music);
     this.setState({
       total: this.state.total - price,
       quantity: this.state.quantity - 1,
@@ -127,7 +126,7 @@ class App extends React.Component {
               />
             </div>
           ) : (
-            ''
+            <ModalAgreement music={this.state.music} total={this.state.total} />
           )}
           <Footer />
         </BrowserRouter>
