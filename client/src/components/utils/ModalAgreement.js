@@ -23,7 +23,9 @@ class ModalAgreement extends React.Component {
       <div id="modalPayment" className="modal">
         {this.props.auth ? (
           <div style={{ color: 'black' }} className="modal-content">
-            <h5 className="center">Agreement License</h5>
+            <h5 className="center title-agree">
+              Terms and Condition Sound Grab
+            </h5>
             <p>
               Lorem ipsum, or lipsum as it is sometimes known, is dummy text
               used in laying out print, graphic or web designs. The passage is
@@ -41,7 +43,7 @@ class ModalAgreement extends React.Component {
               <div
                 style={{ margin: '10px' }}
                 onClick={() => this.agree()}
-                className="btn right"
+                className="btn right btn-agree"
               >
                 I Agree
               </div>
