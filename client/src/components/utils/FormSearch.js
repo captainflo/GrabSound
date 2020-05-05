@@ -23,8 +23,6 @@ const genres = [
   'Podcasts',
   'Pop',
   'Rock',
-  'Urban/R&B',
-  'World',
 ];
 
 const renderGenreSelector = ({ input, meta: { touched, error } }) => (
