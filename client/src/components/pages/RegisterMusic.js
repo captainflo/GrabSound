@@ -21,6 +21,7 @@ const genre = [
   'Podcasts',
   'Pop',
   'Rock',
+  'R&B Soul',
 ];
 
 const renderGenreSelector = ({ input, meta: { touched, error } }) => (
