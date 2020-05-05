@@ -85,3 +85,35 @@ exports.editPlaylist = function (req, res, next) {
     }
   );
 };
+
+exports.editPlaylist = function (req, res, next) {
+  const playlistId = req.body.playlistId;
+  const sounds = req.body.musicId;
+
+  Playlist.findOneAndUpdate(
+    { _id: playlistId },
+    { $push: { sounds: sounds } },
+    { new: true },
+    function (error, playlist) {
+      if (error) {
+        return next(error);
+      }
+      res.send(playlist);
+    }
+  );
+};
+
+exports.deleteSoundPlaylist = function (req, res, next) {
+  const sounds = req.body.soundId;
+  Playlist.findOneAndUpdate(
+    { _id: req.params.id },
+    { $pull: { sounds: sounds } },
+    { new: true },
+    function (error, playlist) {
+      if (error) {
+        return next(error);
+      }
+      res.send(playlist);
+    }
+  );
+};

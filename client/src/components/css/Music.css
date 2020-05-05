@@ -72,6 +72,8 @@
 .download-sound {
   margin-left: auto;
   margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* Playlist */

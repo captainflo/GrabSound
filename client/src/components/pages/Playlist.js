@@ -19,6 +19,16 @@ class Playlist extends React.Component {
     window.open(music);
   };
 
+  delete = (playlistId, soundId) => {
+    const id = this.props.match.params.id;
+    const form = {
+      soundId: soundId,
+    };
+    this.props.deleteSoundPlaylist(playlistId, form, () =>
+      this.props.getSoundPlaylist(id)
+    );
+  };
+
   selectSound = (idx) => {
     this.setState({ playIndex: idx });
   };
@@ -37,9 +47,15 @@ class Playlist extends React.Component {
           </div>
           <div
             onClick={() => this.Download(sound.musicSrc)}
-            className="download-sound"
+            className="download-sound hoverable"
           >
             <i className="fas fa-download"></i>
+          </div>
+          <div
+            onClick={() => this.delete(this.props.playlistId, sound._id)}
+            className="download-sound hoverable"
+          >
+            <i className="far fa-trash-alt"></i>
           </div>
         </div>
       );
@@ -82,9 +98,11 @@ class Playlist extends React.Component {
 }
 
 function mapStateToPros(state) {
+  console.log(state);
   return {
     authenticated: state.auth.authenticated,
     music: state.playlist.listAudio.sounds,
+    playlistId: state.playlist.listAudio._id,
   };
 }
 

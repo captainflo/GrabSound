@@ -178,6 +178,19 @@ export const getSoundPlaylist = (id) => async (dispatch) => {
   }
 };
 
+// get Playlist by user
+export const deleteSoundPlaylist = (id, soundId, callback) => async (
+  dispatch
+) => {
+  try {
+    const response = await axios.post(`/api/playlist/delete/${id}`, soundId);
+    dispatch({ type: PLAYLIST, payload: response.data });
+    callback();
+  } catch (e) {
+    dispatch({ type: PLAYLIST_ERROR, payload: 'error delete sound Playlist' });
+  }
+};
+
 ////////////////////////////////////////// Cloudinary ////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
