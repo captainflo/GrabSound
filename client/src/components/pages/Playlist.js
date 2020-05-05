@@ -62,6 +62,16 @@ class Playlist extends React.Component {
     });
   };
 
+  renderSoundBar = () => {
+    if (this.props.music.length >= 1) {
+      return (
+        <SoundBar audio={this.props.music} playIndex={this.state.playIndex} />
+      );
+    } else {
+      return null;
+    }
+  };
+
   render() {
     return (
       <div>
@@ -75,11 +85,8 @@ class Playlist extends React.Component {
                 <i className="fas fa-music"></i>
               </div>
             </div>
-            {this.renderMusicDownload()}{' '}
-            <SoundBar
-              audio={this.props.music}
-              playIndex={this.state.playIndex}
-            />
+            {this.renderMusicDownload()}
+            {this.renderSoundBar()}
           </div>
         ) : (
           <div style={{ padding: '10px' }} className="center">
