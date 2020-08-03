@@ -8,26 +8,26 @@ The concept of this project was to create an apple music-style premium streaming
 
 **Technologies Used**
 
-- Backend
+**Backend**
 
-* node
-* npm
-* axios
-* cloudinary
-* mongoose
-* passport
-* passport-google-oauth20
-* react-stripe-checkout
-* stripe
-* ...
+- node
+- npm
+- axios
+- cloudinary
+- mongoose
+- passport
+- passport-google-oauth20
+- react-stripe-checkout
+- stripe
+- ...
 
-- Front-End
+**Front-End**
 
-* react
-* redux
-* redux-thunk
-* redux-form
-* react-redux
-* react-router-dom
-* react-materialize
-* ...
+- react
+- redux
+- redux-thunk
+- redux-form
+- react-redux
+- react-router-dom
+- react-materialize
+- ...
